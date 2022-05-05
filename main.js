@@ -16,7 +16,7 @@ const app = Vue.createApp({
 
     methods: {
         addToCart() {
-            this.cart += 1
+            this.cart += 1;
         },
         updateVariant(index) {
             this.selectedVariant = index;
@@ -32,13 +32,13 @@ const app = Vue.createApp({
 
     computed: {
         title() {
-            return this.brand + " " + this.product
+            return this.onSale ? this.brand + " " + this.product : "";
         },
         inStock() {
-            return this.variants[this.selectedVariant].quantity
+            return this.variants[this.selectedVariant].quantity;
         },
         image() {
-            return this.variants[this.selectedVariant].image
+            return this.variants[this.selectedVariant].image;
         }
     }
 })
