@@ -1,7 +1,5 @@
 app.component("prod-details", {
-    props: {
-        details
-    },
+    props: ["details"],
     template:
     /* html */
     ` 
@@ -10,4 +8,3 @@ app.component("prod-details", {
     </ul>
     `
 })
-script

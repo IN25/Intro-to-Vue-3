@@ -30,8 +30,6 @@ app.component("product-display", {
           class="color-circle" 
           :style="{ backgroundColor: variant.color }">
         </div>
-
-        <p>{{cart}}</p>
         
         <button class="button" :class="{ disabledButton: !inStock }" :disabled="!inStock" v-on:click="addToCart">Add to Cart</button>
       </div>
