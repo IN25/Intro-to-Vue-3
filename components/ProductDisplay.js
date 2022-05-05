@@ -1,14 +1,9 @@
-import ProdDetails from './ProdDetails'
-
 app.component("product-display", {
     props: {
         premium: {
             type: Boolean,
             required: true
         }
-    },
-    components: {
-        ProdDetails
     },
     template:
     /*html*/
@@ -26,7 +21,7 @@ app.component("product-display", {
 
         <p>Shipping: {{shipping}} </p>
        
-        <ProdDetails :details="details"></ProdDetails>
+        <prod-details :details="details"></prod-details>
 
         <div 
           v-for="(variant, index) in variants" 
@@ -77,8 +72,4 @@ computed: {
         return this.premium ? "Free" : 2.99
     }
 }
-
-
-    
-
 })
